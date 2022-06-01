@@ -26,7 +26,12 @@ $button-color-violet: #855fb1;
   font-weight: 900;
   border-style: none;
 }
-
+@mixin paragraph() {
+  font-weight: 500px;
+  font-size: 18px;
+  line-height: 26px;
+  color: $paragraph-color;
+}
 * {
   margin: 0;
   padding: 0;
@@ -65,10 +70,7 @@ main {
       line-height: 64px;
     }
     p {
-      font-weight: 500px;
-      font-size: 18px;
-      line-height: 26px;
-      color: $paragraph-color;
+      @include paragraph();
       margin-top: 34px;
     }
   }
@@ -83,6 +85,46 @@ main {
   }
   .what {
     @include button-2();
+    margin-top: 32px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  width: 1110px;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 30px;
+  margin-top: 314px;
+  img {
+    width: 255px;
+    height: 242px;
+    border-radius: 8px;
+  }
+}
+
+.desc-container {
+  width: 540px;
+  height: 240px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+  .built {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #4d96a9;
+    letter-spacing: 4px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 900;
+    margin-top: 16px;
+  }
+  .description {
+    @include paragraph();
     margin-top: 32px;
   }
 }

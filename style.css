@@ -69,4 +69,47 @@ main .what {
   font-weight: 900;
   border-style: none;
   margin-top: 32px;
+}
+
+.flex-container {
+  display: flex;
+  width: 1110px;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 30px;
+  margin-top: 314px;
+}
+.flex-container img {
+  width: 255px;
+  height: 242px;
+  border-radius: 8px;
+}
+
+.desc-container {
+  width: 540px;
+  height: 240px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+}
+.desc-container .built {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #4d96a9;
+  letter-spacing: 4px;
+}
+.desc-container h2 {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 900;
+  margin-top: 16px;
+}
+.desc-container .description {
+  font-weight: 500px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #87879d;
+  margin-top: 32px;
 }/*# sourceMappingURL=style.css.map */
