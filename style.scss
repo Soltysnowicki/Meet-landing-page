@@ -2,6 +2,7 @@ $heading-color: #28283d;
 $paragraph-color: #87879d;
 $footer-color: white;
 $button-color-blue: #4d96a9;
+$footer-color-overlay: hsla(192, 37%, 48%, 50%);
 $button-color-blue-hover: #8fe3f9;
 $button-color-violet: #855fb1;
 
@@ -26,11 +27,11 @@ $button-color-violet: #855fb1;
   font-weight: 900;
   border-style: none;
 }
-@mixin paragraph() {
+@mixin paragraph($font-color: $paragraph-color) {
   font-weight: 500px;
   font-size: 18px;
   line-height: 26px;
-  color: $paragraph-color;
+  color: $font-color;
 }
 * {
   margin: 0;
@@ -44,8 +45,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  background-image: url("/assets/desktop/image-hero-left.png"),
-    url("/assets/desktop/image-hero-right.png");
+  background-image: url("assets/desktop/image-hero-left.png"),
+    url("assets/desktop/image-hero-right.png");
   background-repeat: no-repeat;
   background-position: left, right;
   #logo {
@@ -126,5 +127,40 @@ main {
   .description {
     @include paragraph();
     margin-top: 32px;
+  }
+}
+.overlay {
+  background-image: url("assets/desktop/image-footer.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+footer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-top: 197px;
+  width: 100%;
+  height: 308px;
+  background-color: $footer-color-overlay;
+
+  h3 {
+    color: white;
+    width: 350px;
+    height: 88px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+
+    margin-left: 180px;
+  }
+  p {
+    margin-left: 125px;
+    width: 350px;
+    height: 78px;
+    @include paragraph(white);
+  }
+  button {
+    @include button-1($button-color-violet);
+    margin-left: 92px;
   }
 }
