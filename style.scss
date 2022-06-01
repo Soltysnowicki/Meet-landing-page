@@ -1,0 +1,88 @@
+$heading-color: #28283d;
+$paragraph-color: #87879d;
+$footer-color: white;
+$button-color-blue: #4d96a9;
+$button-color-blue-hover: #8fe3f9;
+$button-color-violet: #855fb1;
+
+@mixin button-1($theme: $button-color-blue) {
+  background-color: $theme;
+  border-radius: 29px;
+  width: 193px;
+  height: 58px;
+  font-family: "Red Hat Display";
+  color: $footer-color;
+  font-weight: 900;
+  border-style: none;
+}
+
+@mixin button-2($theme: $button-color-violet) {
+  background-color: $theme;
+  border-radius: 29px;
+  width: 139px;
+  height: 58px;
+  font-family: "Red Hat Display";
+  color: $footer-color;
+  font-weight: 900;
+  border-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Red Hat Display";
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-image: url("/assets/desktop/image-hero-left.png"),
+    url("/assets/desktop/image-hero-right.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+  #logo {
+    margin-top: 80px;
+    width: 119px;
+    height: 28px;
+  }
+
+  .hero {
+    display: flex;
+    flex-flow: row wrap;
+    width: 540px;
+    height: 500px;
+    align-content: center;
+    justify-content: center;
+    height: 304px;
+    text-align: center;
+    margin-top: 108px;
+    h1 {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 64px;
+    }
+    p {
+      font-weight: 500px;
+      font-size: 18px;
+      line-height: 26px;
+      color: $paragraph-color;
+      margin-top: 34px;
+    }
+  }
+  .download-1 {
+    @include button-1();
+    margin-right: 16px;
+
+    margin-top: 32px;
+    .version {
+      color: $button-color-blue-hover;
+    }
+  }
+  .what {
+    @include button-2();
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display";
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-image: url("/assets/desktop/image-hero-left.png"), url("/assets/desktop/image-hero-right.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+}
+main #logo {
+  margin-top: 80px;
+  width: 119px;
+  height: 28px;
+}
+main .hero {
+  display: flex;
+  flex-flow: row wrap;
+  width: 540px;
+  height: 500px;
+  align-content: center;
+  justify-content: center;
+  height: 304px;
+  text-align: center;
+  margin-top: 108px;
+}
+main .hero h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 64px;
+}
+main .hero p {
+  font-weight: 500px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #87879d;
+  margin-top: 34px;
+}
+main .download-1 {
+  background-color: #4d96a9;
+  border-radius: 29px;
+  width: 193px;
+  height: 58px;
+  font-family: "Red Hat Display";
+  color: white;
+  font-weight: 900;
+  border-style: none;
+  margin-right: 16px;
+  margin-top: 32px;
+}
+main .download-1 .version {
+  color: #8fe3f9;
+}
+main .what {
+  background-color: #855fb1;
+  border-radius: 29px;
+  width: 139px;
+  height: 58px;
+  font-family: "Red Hat Display";
+  color: white;
+  font-weight: 900;
+  border-style: none;
+  margin-top: 32px;
+}/*# sourceMappingURL=style.css.map */
