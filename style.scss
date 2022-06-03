@@ -158,11 +158,11 @@ footer {
   h3 {
     color: white;
     width: 350px;
+
     height: 88px;
     font-weight: 900;
     font-size: 40px;
     line-height: 44px;
-
     margin-left: 180px;
   }
   p {
@@ -172,6 +172,7 @@ footer {
   }
   button {
     @include button-1($button-color-violet);
+    margin-right: 50px;
   }
   button:hover {
     background: $button-color-blue-hover-two;
@@ -197,6 +198,8 @@ hr {
   opacity: 0.25;
   color: $paragraph-color;
   margin: 0 auto;
+  bottom: -30px;
+  position: relative;
 }
 #first {
   margin-top: 90px;
@@ -206,9 +209,9 @@ hr {
   margin-top: 72px;
 }
 #bot {
-  left: 815px;
-  top: 1500px;
-  position: absolute;
+  position: relative;
+  bottom: -30px;
   z-index: 1;
   background-color: white;
+  margin: 0 auto;
 }
