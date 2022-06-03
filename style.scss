@@ -158,7 +158,6 @@ footer {
   h3 {
     color: white;
     width: 350px;
-
     height: 88px;
     font-weight: 900;
     font-size: 40px;
@@ -216,14 +215,15 @@ hr {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 1200px) {
   main {
     background-position: (left top 140px), (right top 140px);
+    background-size: 50%;
 
     .hero {
       width: 457px;
       height: 262px;
-      margin-top: 439px;
+      margin-top: 550px;
       h1 {
         font-size: 48px;
         line-height: 48px;
@@ -281,5 +281,28 @@ hr {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    background-image: url("assets/desktop/image-hero-left.png"),
+      url("assets/desktop/image-hero-right.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    .hero {
+      width: 457px;
+      height: 262px;
+      margin-top: 255px;
+      h1 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+      p {
+        @include paragraph();
+        font-size: 16px;
+        height: 78px;
+      }
+    }
   }
 }
