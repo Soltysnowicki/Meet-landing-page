@@ -127,6 +127,7 @@ main .what:hover {
   background-image: url("assets/desktop/image-footer.jpg");
   background-repeat: none;
   background-size: cover;
+  background-position: center;
 }
 
 footer {
@@ -136,7 +137,7 @@ footer {
   justify-content: space-between;
   width: 100%;
   height: 308px;
-  background-color: hsla(192deg, 37%, 48%, 0.5);
+  background-color: hsla(192deg, 37%, 48%, 0.9);
 }
 footer h3 {
   color: white;
@@ -190,8 +191,6 @@ hr {
   opacity: 0.25;
   color: #87879d;
   margin: 0 auto;
-  bottom: -30px;
-  position: relative;
 }
 
 #first {
@@ -200,6 +199,8 @@ hr {
 
 #second {
   margin-top: 72px;
+  bottom: -30px;
+  position: relative;
 }
 
 #bot {
@@ -208,4 +209,74 @@ hr {
   z-index: 1;
   background-color: white;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1220px) {
+  main {
+    background-position: left top 140px, right top 140px;
+  }
+  main .hero {
+    width: 457px;
+    height: 262px;
+    margin-top: 439px;
+  }
+  main .hero h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  main .hero p {
+    font-weight: 500px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #87879d;
+    font-size: 16px;
+    margin-top: 24px;
+  }
+  main #logo {
+    margin-top: 48px;
+    width: 119px;
+    height: 28px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: column wrap;
+    width: 689px;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 67px;
+  }
+  .flex-container img {
+    width: 164px;
+    height: 156px;
+  }
+
+  footer {
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    background-position: cover;
+  }
+  footer h3 {
+    width: 457px;
+    text-align: center;
+    margin-left: 0;
+  }
+  footer p {
+    margin-top: 32px;
+    width: 573px;
+    height: 52px;
+    text-align: center;
+  }
+  footer button {
+    margin-right: 0;
+    margin-top: 40px;
+  }
+
+  .overlay {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }/*# sourceMappingURL=style.css.map */

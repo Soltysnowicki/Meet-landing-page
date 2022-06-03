@@ -2,7 +2,7 @@ $heading-color: #28283d;
 $paragraph-color: #87879d;
 $footer-color: white;
 $button-color-blue: #4d96a9;
-$footer-color-overlay: hsla(192, 37%, 48%, 50%);
+$footer-color-overlay: hsla(192, 37%, 48%, 90%);
 $button-color-blue-hover: #8fe3f9;
 $button-color-blue-hover-one: #71c0d4;
 $button-color-blue-hover-two: #b18bdd;
@@ -82,7 +82,6 @@ main {
   .download-1 {
     @include button-1();
     margin-right: 16px;
-
     margin-top: 32px;
     .version {
       color: $button-color-blue-hover;
@@ -145,6 +144,7 @@ main {
   background-image: url("assets/desktop/image-footer.jpg");
   background-repeat: none;
   background-size: cover;
+  background-position: center;
 }
 footer {
   display: flex;
@@ -198,8 +198,6 @@ hr {
   opacity: 0.25;
   color: $paragraph-color;
   margin: 0 auto;
-  bottom: -30px;
-  position: relative;
 }
 #first {
   margin-top: 90px;
@@ -207,6 +205,8 @@ hr {
 
 #second {
   margin-top: 72px;
+  bottom: -30px;
+  position: relative;
 }
 #bot {
   position: relative;
@@ -214,4 +214,72 @@ hr {
   z-index: 1;
   background-color: white;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1220px) {
+  main {
+    background-position: (left top 140px), (right top 140px);
+
+    .hero {
+      width: 457px;
+      height: 262px;
+      margin-top: 439px;
+      h1 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+      p {
+        @include paragraph();
+        font-size: 16px;
+        margin-top: 24px;
+      }
+    }
+    #logo {
+      margin-top: 48px;
+      width: 119px;
+      height: 28px;
+    }
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: column wrap;
+    width: 689px;
+    justify-content: center;
+
+    gap: 7px;
+    margin-top: 67px;
+    img {
+      width: 164px;
+      height: 156px;
+    }
+  }
+
+  footer {
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    background-position: cover;
+    h3 {
+      width: 457px;
+      text-align: center;
+      margin-left: 0;
+    }
+    p {
+      margin-top: 32px;
+      width: 573px;
+      height: 52px;
+      text-align: center;
+    }
+    button {
+      margin-right: 0;
+      margin-top: 40px;
+    }
+  }
+  .overlay {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
