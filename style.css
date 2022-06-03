@@ -288,9 +288,9 @@ hr {
     background-size: 50%;
   }
   main .hero {
-    width: 457px;
+    width: 327px;
     height: 262px;
-    margin-top: 255px;
+    margin-top: 400px;
   }
   main .hero h1 {
     font-size: 48px;
@@ -303,5 +303,29 @@ hr {
     color: #87879d;
     font-size: 16px;
     height: 78px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 310px;
+    height: 327px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 67px;
+  }
+  .flex-container img {
+    width: 151px;
+    height: 143px;
+  }
+
+  .desc-container {
+    width: 327px;
+    height: 284px;
+  }
+  .desc-container h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 24px;
   }
 }/*# sourceMappingURL=style.css.map */
