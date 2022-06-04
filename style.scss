@@ -1,49 +1,16 @@
-$heading-color: #28283d;
-$paragraph-color: #87879d;
-$footer-color: white;
-$button-color-blue: #4d96a9;
-$footer-color-overlay: hsla(192, 37%, 48%, 90%);
-$button-color-blue-hover: #8fe3f9;
-$button-color-blue-hover-one: #71c0d4;
-$button-color-blue-hover-two: #b18bdd;
-$button-color-violet: #855fb1;
+@use "sass/abstracts/_colors.scss";
+@use "sass/abstracts/_mixins.scss";
 
-@mixin button-1($theme: $button-color-blue) {
-  background-color: $theme;
-  border-radius: 29px;
-  width: 193px;
-  height: 58px;
-  font-family: "Red Hat Display";
-  color: $footer-color;
-  font-weight: 900;
-  border-style: none;
-}
-
-@mixin button-2($theme: $button-color-violet) {
-  background-color: $theme;
-  border-radius: 29px;
-  width: 139px;
-  height: 58px;
-  font-family: "Red Hat Display";
-  color: $footer-color;
-  font-weight: 900;
-  border-style: none;
-}
-
-@mixin paragraph($font-color: $paragraph-color) {
-  font-weight: 500px;
-  font-size: 18px;
-  line-height: 26px;
-  color: $font-color;
-}
+/* HTML margin & padding reset */
 * {
   margin: 0;
   padding: 0;
 }
 body {
   font-family: "Red Hat Display";
-  position: relative;
 }
+
+/*main component and hero formatting*/
 main {
   display: flex;
   justify-content: center;
@@ -75,32 +42,34 @@ main {
       line-height: 64px;
     }
     p {
-      @include paragraph();
+      @include mixins.paragraph();
       margin-top: 34px;
     }
   }
+  /*buttons formatting*/
   .download-1 {
-    @include button-1();
+    @include mixins.button-1();
     margin-right: 16px;
     margin-top: 32px;
     .version {
-      color: $button-color-blue-hover;
+      color: colors.$button-color-blue-hover;
     }
   }
   .download-1:hover {
-    background: $button-color-blue-hover-one;
+    background: colors.$button-color-blue-hover-one;
     cursor: pointer;
   }
   .what {
-    @include button-2();
+    @include mixins.button-2();
     margin-top: 32px;
   }
   .what:hover {
-    background: $button-color-blue-hover-two;
+    background: colors.$button-color-blue-hover-two;
     cursor: pointer;
   }
 }
 
+/*image flex-container formatting*/
 .flex-container {
   display: flex;
   width: 1110px;
@@ -114,7 +83,7 @@ main {
     border-radius: 8px;
   }
 }
-
+/*description formatting*/
 .desc-container {
   width: 540px;
   height: 240px;
@@ -136,10 +105,11 @@ main {
     margin-top: 16px;
   }
   .description {
-    @include paragraph();
+    @include mixins.paragraph();
     margin-top: 32px;
   }
 }
+/*footer and footer overlay formatting*/
 .overlay {
   background-image: url("assets/desktop/image-footer.jpg");
   background-repeat: none;
@@ -153,7 +123,7 @@ footer {
   justify-content: space-between;
   width: 100%;
   height: 308px;
-  background-color: $footer-color-overlay;
+  background-color: colors.$footer-color-overlay;
 
   h3 {
     color: white;
@@ -167,17 +137,18 @@ footer {
   p {
     width: 350px;
     height: 78px;
-    @include paragraph(white);
+    @include mixins.paragraph(white);
   }
   button {
-    @include button-1($button-color-violet);
+    @include mixins.button-1(colors.$button-color-violet);
     margin-right: 50px;
   }
   button:hover {
-    background: $button-color-blue-hover-two;
+    background: colors.$button-color-blue-hover-two;
     cursor: pointer;
   }
 }
+/*site part number formatting*/
 .number {
   border: 1px solid rgba(135, 135, 157, 0.25);
   border-radius: 29px;
@@ -192,10 +163,17 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
+#bot {
+  position: relative;
+  bottom: -30px;
+  z-index: 1;
+  background-color: white;
+  margin: 0 auto;
+}
+/*horizontal lines formatting*/
 hr {
   opacity: 0.25;
-  color: $paragraph-color;
+  color: colors.$paragraph-color;
   margin: 0 auto;
 }
 #first {
@@ -207,14 +185,7 @@ hr {
   bottom: -30px;
   position: relative;
 }
-#bot {
-  position: relative;
-  bottom: -30px;
-  z-index: 1;
-  background-color: white;
-  margin: 0 auto;
-}
-
+/*device breakpoint for tablets*/
 @media only screen and (max-width: 1200px) {
   main {
     background-position: (left top 140px), (right top 140px);
@@ -229,7 +200,7 @@ hr {
         line-height: 48px;
       }
       p {
-        @include paragraph();
+        @include mixins.paragraph();
         font-size: 16px;
         margin-top: 24px;
       }
@@ -283,7 +254,7 @@ hr {
     background-position: center;
   }
 }
-
+/*device breakpoint for smartphones*/
 @media only screen and (max-width: 768px) {
   main {
     background-image: url("assets/desktop/image-hero-left.png"),
@@ -299,7 +270,7 @@ hr {
         line-height: 48px;
       }
       p {
-        @include paragraph();
+        @include mixins.paragraph();
         font-size: 16px;
         height: 78px;
       }
@@ -323,10 +294,11 @@ hr {
   .desc-container {
     width: 327px;
     height: 284px;
-    h2 {
-      font-size: 32px;
-      line-height: 36px;
-      margin-top: 24px;
+  }
+
+  footer {
+    p {
+      width: 327px;
     }
   }
 }

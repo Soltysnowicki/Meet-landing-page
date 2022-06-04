@@ -1,0 +1,30 @@
+@use "_colors.scss";
+
+@mixin button-1($theme: colors.$button-color-blue) {
+  background-color: $theme;
+  border-radius: 29px;
+  width: 193px;
+  height: 58px;
+  font-family: "Red Hat Display";
+  color: colors.$footer-color;
+  font-weight: 900;
+  border-style: none;
+}
+
+@mixin button-2($theme: colors.$button-color-violet) {
+  background-color: $theme;
+  border-radius: 29px;
+  width: 139px;
+  height: 58px;
+  font-family: "Red Hat Display";
+  color: colors.$footer-color;
+  font-weight: 900;
+  border-style: none;
+}
+
+@mixin paragraph($font-color: colors.$paragraph-color) {
+  font-weight: 500px;
+  font-size: 18px;
+  line-height: 26px;
+  color: $font-color;
+}
